@@ -1,0 +1,14 @@
+https://cloud.tencent.com/developer/article/1041042
+
+
+ 远程访问配置
+
+　　默认网页是不允许访问的，需要增加一个用户修改一下权限，代码如下：
+
+　　添加用户:rabbitmqctl add_user admin 123456
+
+　　添加权限:rabbitmqctl set_permissions -p "/" admin ".*" ".*" ".*"
+
+      修改用户角色rabbitmqctl set_user_tags admin administrator
+
+　　然后就可以远程访问了，然后可直接配置用户权限等信息。
